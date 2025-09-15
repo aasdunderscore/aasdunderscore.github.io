@@ -1,3 +1,11 @@
+img {
+    border-radius: 8px;
+    display: flex;
+    margin-left: 0vw;
+    margin-right: 0vw;
+    max-width: 85vw;
+}
+
 :root {
     /* HSL 100° 30% x% */
     --color-headertext: #d7fcd2;
