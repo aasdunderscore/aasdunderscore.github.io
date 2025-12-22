@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="aasd">
+    <title>Home - aasd</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="headline-large">Home</h1>
+    </header>
+
+    <!-- Overlay -->
+    <div id="overlay"></div>
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+        <nav>
+            <a href="#" class="title-medium">Home</a>
+            <a href="Devices.html" class="title-medium">Devices</a>
+            <a href="Software.html" class="title-medium">Software</a>
+            <a href="Websites.html" class="title-medium">Websites</a>
+            <a href="about.html" class="title-medium">About</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+        <div class="button-grid">
+         
+            <a href="https://modrinth.com/modpack/no-comp" class="title-medium button long-button">Get my modrinth modpack<br><span style="color:#afbdaa;font-size:90%">Make Minecraft fun again</span></a>
+            <a class="title-center"></a>
+            <a href="https://discord.gg/ZTtp3bBu" class="title-medium button">Discord<br><span style="color:#afbdaa;font-size:90%">feel free to contact me</span></a>
+            <a href="https://twitter.com/aasd_underscore" class="title-medium button">Twitter<br><span style="color:#afbdaa;font-size:90%">It's not called "X" anymore, can't tell me otherwise.</span></a>
+            <a href="https://youtube.com/@aasd_rblx" class="title-medium button">Youtube<br><span style="color:#afbdaa;font-size:90%">Active sometimes</span></a>
+            <a href="https://youtu.be/hB7CDrVnNCs" class="title-medium button">test tile<br><span style="color:#afbdaa;font-size:90%">do not click</span></a>
+            <p><a></a></p>
+        </div>
+        
+    </main>
+
+    <!-- Floating Action Button (Now toggles sidebar) -->
+    <button id="menu-btn" class="fab" aria-label="Toggle Menu">☰</button>
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+
+        function toggleSidebar(open) {
+            sidebar.classList.toggle("open", open);
+            overlay.classList.toggle("show", open);
+        }
+
+        menuBtn.addEventListener("click", () => {
+            toggleSidebar(!sidebar.classList.contains("open"));
+        });
+
+        overlay.addEventListener("click", () => toggleSidebar(false));
+
+        // Strong ripple effect for buttons and nav items
+        function createRipple(event, element) {
+            const ripple = document.createElement("span");
+            ripple.classList.add("ripple");
+
+            const rect = element.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height) * 1.5; // Larger ripple size
+            ripple.style.width = ripple.style.height = `${size}px`;
+            ripple.style.left = `${event.clientX - rect.left - size / 2}px`;
+            ripple.style.top = `${event.clientY - rect.top - size / 2}px`;
+
+            element.appendChild(ripple);
+            setTimeout(() => ripple.remove(), 800); // Longer duration for a stronger effect
+        }
+
+        // Apply ripple effect to FAB and nav items
+        [menuBtn, ...document.querySelectorAll("aside nav a")].forEach(element => {
+            element.addEventListener("click", (e) => createRipple(e, element));
+        });
+    </script>
+</body>
+</html>
