@@ -46,6 +46,29 @@
     }
 }
 
+
+@media screen and (max-width: 470px) {
+    .nav-bar {
+        zoom: 90%;
+        width: fit-content;
+    }
+    body {
+        padding: 2rem; /* Reset padding on mobile */
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .main-title {
+        font-size: 3rem;
+    }
+    .hero {
+        margin-top: 300px;
+    }
+    br {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 275px) {
     .sidebar-nav {
         display: none; /* Hide on mobile */
