@@ -26,6 +26,16 @@
     .main-title {
         font-size: 3rem;
     }
+    table {
+        min-width: 600px;
+        overflow-x: auto;
+    }
+    .module {
+        overflow-x: auto;
+    }
+    .module table {
+        overflow-x: auto;
+    }
 }
 
 @media screen and (max-width: 600px) {
