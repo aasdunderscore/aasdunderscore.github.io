@@ -17,9 +17,13 @@
     .nav-bar {
         padding: 0rem 0rem;
         background: none;
+        backdrop-filter: blur(4px);
+        text-shadow: 0px 0px 3px var(--bg);
         position: fixed;
         top: 0px;
         border-radius: 0;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
         border-bottom: 1px solid rgba(175, 170, 185, 0.2);
         border-left: none;
         border-right: none;
@@ -47,6 +51,9 @@
     }
     .module table {
         overflow-x: auto;
+    }
+    .hero {
+        height: 10px;
     }
 }
 
