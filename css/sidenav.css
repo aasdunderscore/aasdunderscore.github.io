@@ -1,0 +1,49 @@
+.sidenav{
+    width: 11vw;
+    border: 2px solid var(--ashgrey);
+    padding-left: 4px;
+}
+.mainpoints{
+    list-style-position: inside;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    padding-left: 4px;
+}
+.mainpoints a{
+    color: var(--text);
+    text-decoration: none;
+    font-size: medium;
+    padding-bottom: 2px;
+    text-align: center;
+    list-style: none;
+}
+.mainpoints > li > a{
+    padding-left: 6px;
+}
+.subpoints {
+    list-style-position: inside;
+    padding-left: 8px;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-height: 500px;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
+}
+.subpoints a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: medium;
+    border-bottom: 2px solid var(--darkaccent);
+    padding-bottom: 2px;
+    text-align: center;
+    list-style: none;
+}
+.space{
+    margin-top: 8px;
+}

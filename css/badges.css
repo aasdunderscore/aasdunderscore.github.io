@@ -1,0 +1,110 @@
+.date {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: var(--green);
+    background: linear-gradient(135deg, rgba(200, 213, 185, 0.15) 0%, rgba(143, 192, 169, 0.08) 100%);
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px;
+    border: 1px solid rgba(200, 213, 185, 0.3);
+    border-left: 4px solid var(--green);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+.pricebadge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: var(--green);
+    background: linear-gradient(135deg, rgba(200, 213, 185, 0.15) 0%, rgba(143, 192, 169, 0.08) 100%);
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+.goldbadge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: var(--gold);
+    background: linear-gradient(135deg, hsla(49, 100%, 78%, 0.15) 0%, hsla(30, 20%, 66%, 0.08) 100%);
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    align-items: center;
+    gap: 0.4rem;
+}
+ .lowprofilebadge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #e5acff;
+    background: linear-gradient(135deg, hsla(287, 100%, 78%, 0.10) 0%, hsla(297, 20%, 66%, 0.08) 100%);
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    align-items: center;
+    gap: 0.4rem;
+}
+.pcbonly {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #ace9ff;
+    background: linear-gradient(135deg, hsla(287, 100%, 78%, 0.10) 0%, hsla(297, 20%, 66%, 0.08) 100%);
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    align-items: center;
+    gap: 0.4rem;
+}
+.oldui {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: var(--red);
+    background: linear-gradient(135deg, hsla(345, 90%, 49%, 0.1) 0%, hsla(345, 68%, 73%, 0.08) 100%);
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    align-items: center;
+    gap: 0.4rem;
+}
+.wip {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: yellow;
+    background: linear-gradient(135deg, rgba(193, 226, 155, 0.15) 0%, rgba(231, 235, 10, 0.08) 100%);
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}

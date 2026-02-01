@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="aasd">
+    <title>aasd's setup</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="headline-large">My setup</h1>
+    </header>
+
+    <!-- Overlay -->
+    <div id="overlay"></div>
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+        <nav>
+            <a href="index.html" class="title-medium">Home</a>
+            <a href="Devices.html" class="title-medium">Devices</a>
+            <a href="Software.html" class="title-medium">Software</a>
+            <a href="Websites.html" class="title-medium">Websites</a>
+            <a href="about.html" class="title-medium">About</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+        <div class="button-grid">
+            <a class="title-center">On my desk currently</a>
+            <a href="#" class="title-medium button">Monitor<br><span style="color:#afbdaa;font-size:90%">Philips 34B1U5600</span></a>
+            <a href="#" class="title-medium button">Keyboard<br><span style="color:#afbdaa;font-size:90%">Melgeek Made68 Pro</span></a>
+            <a href="#" class="title-medium button">Mouse<br><span style="color:#afbdaa;font-size:90%">Dareu A950 Air/Wing</span></a>
+            <a href="#" class="title-medium button">Mousepad<br><span style="color:#afbdaa;font-size:90%">Atom glasspad</span></a>
+            <a href="#" class="title-medium button">In-ear monitors<br><span style="color:#afbdaa;font-size:90%">Tangzu Wan'er Jade</span></a>
+            <a href="#" class="title-medium button">Headphones<br><span style="color:#afbdaa;font-size:90%">Edifier WH950NB</span></a>
+            <a href="#" class="title-medium button">Microphone<br><span style="color:#afbdaa;font-size:90%">Elgato Wave Neo</span></a>
+            <a href="#" class="title-medium button">Mic arm<br><span style="color:#afbdaa;font-size:90%">Krux Arm 500</span></a>
+            <a class="title-center">What I've used long-term</a>
+            <a class="title-medium button long-button" style="text-align:left;">
+                Monitors:<br><span style="color:#afbdaa;font-size:90%">
+                - Philips 34B1U5600<br></span>
+                Keyboards:<br><span style="color:#afbdaa;font-size:90%">
+                - Logitech MX Keys S<br>
+                - Keychron K2v2<br>
+                - Nuphy Field75 HE<br>
+                - Melgeek Made68 Pro<br></span>
+                Mice:<br><span style="color:#afbdaa;font-size:90%">
+                - ATK VXE R1 Pro<br>
+                - Logitech G Pro X Superlight<br>
+                - Glorious Model O- Wired<br>
+                - Logitech G703<br>
+                - Bloody A90 (first batch)<br>
+                - Dream Machines DM4 EVO<br>
+                - Dareu a950 Air/Wing<br></span>
+                Mousepads:<br><span style="color:#afbdaa;font-size:90%">
+                - Genesis Carbon 500<br>
+                - Fantech MP353<br>
+                - Atom Glasspad<br></span>
+                In-ear monitors:<br><span style="color:#afbdaa;font-size:90%">
+                - Tangzu Wan'er Jade<br></span>
+                Headphones:<br><span style="color:#afbdaa;font-size:90%">
+                - Edifier WH950NB<br>
+                - Generic P47<br></span>a
+                Headsets:<br><span style="color:#afbdaa;font-size:90%">
+                - Razer Electra V2<br>
+                - Razer Kraken V2<br>
+                - Steelseries Arctis 9<br></span>
+                True Wireless Earbuds:<br><span style="color:#afbdaa;font-size:90%">
+                - Generic Alibaba Apple Airpods clone<br>
+                - Moondrop Space Travel<br>
+                - Moondrop Space Travel 2<br></span>
+                Microphones:<br><span style="color:#afbdaa;font-size:90%">
+                - Elgato Wave Neo<br></span>
+                Mic arms:<br><span style="color:#afbdaa;font-size:90%">
+                - Krux Arm 500</span>
+            </a>
+            <p><a></a></p>
+        </div>
+        
+    </main>
+
+    <!-- Floating Action Button (Now toggles sidebar) -->
+    <button id="menu-btn" class="fab" aria-label="Toggle Menu">☰</button>
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+
+        function toggleSidebar(open) {
+            sidebar.classList.toggle("open", open);
+            overlay.classList.toggle("show", open);
+        }
+
+        menuBtn.addEventListener("click", () => {
+            toggleSidebar(!sidebar.classList.contains("open"));
+        });
+
+        overlay.addEventListener("click", () => toggleSidebar(false));
+
+        // Strong ripple effect for buttons and nav items
+        function createRipple(event, element) {
+            const ripple = document.createElement("span");
+            ripple.classList.add("ripple");
+
+            const rect = element.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height) * 1.5; // Larger ripple size
+            ripple.style.width = ripple.style.height = `${size}px`;
+            ripple.style.left = `${event.clientX - rect.left - size / 2}px`;
+            ripple.style.top = `${event.clientY - rect.top - size / 2}px`;
+
+            element.appendChild(ripple);
+            setTimeout(() => ripple.remove(), 800); // Longer duration for a stronger effect
+        }
+
+        // Apply ripple effect to FAB and nav items
+        [menuBtn, ...document.querySelectorAll("aside nav a")].forEach(element => {
+            element.addEventListener("click", (e) => createRipple(e, element));
+        });
+    </script>
+</body>
+</html>

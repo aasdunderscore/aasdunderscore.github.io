@@ -1,0 +1,32 @@
+.front{
+    width: 65vw;
+    border: 2px solid var(--red);
+    margin-right: auto;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+}
+.ftitle{
+    justify-self: center;
+}
+.fshortcuts{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: auto;
+    gap: 5px;
+    border: 2px solid var(--red);
+    max-width: 40%;
+    justify-self: center;
+    flex-wrap: wrap;
+    align-self: center;
+    margin-bottom: 5px;
+}
+.fshortcuts a{
+    border-bottom: 3px solid var(--text);
+    border-radius: 5px;
+    color: var(--text);
+    text-decoration: none;
+    background-color: var(--bg);
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Devices - aasd note</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="headline-large">Devices</h1>
+    </header>
+
+    <div id="overlay"></div>
+
+    <aside id="sidebar">
+        <nav>
+            <a href="index.html" class="title-medium">Home</a>
+            <a href="#" class="title-medium">Devices</a>
+            <a href="Software.html" class="title-medium">Software</a>
+            <a href="Websites.html" class="title-medium">Websites</a>
+            <a href="about.html" class="title-medium">About</a>
+        </nav>
+    </aside>
+
+    <main>
+        <div class="button-grid">
+            <a href="reviews.html" class="title-medium button">My reviews<br><span style="color:#afbdaa;font-size:90%">i do these for fun</span></a>
+
+            <a href="my setup.html" class="title-medium button">My setup<br><span style="color:#afbdaa;font-size:90%">shit I've tried long-term</span></a>
+            <a href="#" class="title-medium button">Mechanical keyboards<br><span style="color:#afbdaa;font-size:90%">A little birdie told me Razer is jealous</span></a>
+            <a href="#" class="title-medium button">Magnetic keyboards<br><span style="color:#afbdaa;font-size:90%">A little birdie told me Wooting is jealous</span></a>
+
+            <a href="#" class="title-medium button long-button">Mice<br><span style="color:#afbdaa;font-size:90%">general recommendations</span></a>
+        </div>
+    </main>
+
+    <button id="menu-btn" class="fab" aria-label="Toggle Menu">☰</button>
+
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+
+        function toggleSidebar(open) {
+            sidebar.classList.toggle("open", open);
+            overlay.classList.toggle("show", open);
+        }
+
+        menuBtn.addEventListener("click", () => {
+            toggleSidebar(!sidebar.classList.contains("open"));
+        });
+
+        overlay.addEventListener("click", () => toggleSidebar(false));
+
+        // Ripple effect for buttons and nav links
+        function createRipple(event, element) {
+            const ripple = document.createElement("span");
+            ripple.classList.add("ripple");
+
+            const rect = element.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height) * 1.5;
+            ripple.style.width = ripple.style.height = `${size}px`;
+            ripple.style.left = `${event.clientX - rect.left - size / 2}px`;
+            ripple.style.top = `${event.clientY - rect.top - size / 2}px`;
+
+            element.appendChild(ripple);
+            setTimeout(() => ripple.remove(), 800);
+        }
+
+        // MODIFIED: Added '.button-grid .button' to include the new main content buttons
+        const rippleElements = [
+            menuBtn,
+            ...document.querySelectorAll("aside nav a, .button-grid .button")
+        ];
+
+        rippleElements.forEach(el => {
+            el.addEventListener("mousedown", (e) => createRipple(e, el));
+        });
+    </script>
+</body>
+</html>

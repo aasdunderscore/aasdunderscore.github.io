@@ -1,0 +1,31 @@
+.point{
+    list-style-type: disc;
+}
+.foldable .toggle {
+    cursor: pointer;
+    user-select: none;
+}
+.foldable .toggle:hover {
+    opacity: 0.8;
+}
+.foldable.collapsed .subpoints {
+    max-height: 0;
+    opacity: 0;
+}
+.toggle {
+    margin-right: 8px;
+}
+.toggle::before {
+    content: '<';
+    margin-left: -8px;
+    margin-right: 20px;
+    display: inline-block;
+    transform: rotate(-90deg);
+    transition: transform 0.3s ease;
+}
+.foldable.collapsed .toggle::before {
+    transform: rotate(-180deg);
+}
+.mainpoints{
+    list-style-type: none;
+}

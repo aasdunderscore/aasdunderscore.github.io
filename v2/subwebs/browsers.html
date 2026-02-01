@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="aasd">
+        <title>easy access | web browsers</title>
+        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/table.css">
+        <link rel="stylesheet" href="../styles/media/style_media.css">
+        <style>
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-auto-rows: min-content; /* Changed: allows natural height */
+                gap: 2rem;
+                align-items: start;
+                position: relative; /* For anchor positioning */
+            }
+            .grid a {
+                text-decoration: none;
+                color: var(--oldrose);
+            }
+            .module {
+                background: rgba(26, 26, 26, 0.6);
+                backdrop-filter: blur(20px);
+                border: 1px solid rgba(175, 170, 185, 0.2);
+                border-radius: 20px;
+                overflow-x: auto;
+                display: flex;
+                flex-direction: column;
+                transition: all 0.4s ease;
+                height: auto; /* Changed: natural height */
+                min-height: 300px; /* Minimum height for consistency */
+                position: relative; /* For anchor positioning */
+            }
+            .module::before {
+                content: '';
+                height: 4px;
+                background: linear-gradient(90deg, var(--cherryrose), var(--oldrose), var(--lilacashe));
+            }
+            .module:hover {
+                transform: translateY(-10px) scale(1.02);
+                border-color: var(--oldrose);
+                box-shadow: 0 20px 40px rgba(180, 130, 145, 0.3);
+            }
+            .title {
+                text-align: center;
+                color: var(--azuremist);
+                padding: 1rem;
+                font-size: 1.4rem;
+                font-weight: 600;
+            }
+            .imgbox {
+                height: fit-content;
+                width: 80vw;
+                overflow-x: auto;
+                padding: 1rem;
+            }
+            .imgbox img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 16px;
+                transition: transform 0.3s ease;
+            }
+            .imgbox img:hover {
+                transform: scale(1);
+            }
+            .desc {
+                padding: 0 1.5rem;
+                flex-grow: 1;
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+            .update {
+                padding: 1rem;
+                text-align: center;
+                color: var(--lilacashe);
+                font-size: 0.9rem;
+                border-top: 1px solid rgba(175, 170, 185, 0.1);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="start"></div>
+        <!-- Navigation -->
+        <nav class="nav-bar">
+            <a href="../index.html">home</a>
+            <a href="../subwebs/setup.html">my setup</a>
+            <a href="../subwebs/aboutme.html">about me</a><br>
+            <a href="https://discord.gg/bx6sedEX" target="_blank">discord</a>
+            <a href="https://x.com/aasd_underscore" target="_blank">twitter</a>
+            <a><abbr title="coming soon!" style="text-decoration: none;">youtube</abbr></a>
+        </nav>
+        <!-- Left Sidebar Menu -->
+        <nav class="sidebar-nav">
+            <a href="#module-1" class="sidebar-link">Android</a>
+            <a href="#module-2" class="sidebar-link">Windows</a>
+            <a href="#module-3" class="sidebar-link">why switch?</a>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="main-title">web browsers</h1>
+            <div class="sub-links">
+                <a href="#module-1" class="sub-link">windows</a>
+                <a href="#module-4" class="sub-link">android</a>
+                <a href="#module-6" class="sub-link">FAQ</a>
+            </div>
+            <div class="note"><a href="#module-1">Scroll down for actual content!</a></div>
+        </section>
+
+        <!-- Main Grid of Modules -->
+        <section class="grid">
+
+            <div class="module">
+                <h3 class="title">Android</h3>
+                <div class="imgbox">
+                    <div class="desc">
+                        <div class="update"></div>
+                        <h3>chrome-based</h3>
+                        <table border="2">
+                            <tr class="heading" style=" text-align: center;"><td class="heading">name</td><td class="heading">layout</td><td class="heading">customizability</td><td class="heading">comments</td></tr>
+                            
+                            <tr class="white"><td class="brand">Arc</td><td class="brand">something new</td><td>bad</td><td class="tabledesc">focuses on ease of use and privacy, <span style="color: var(--lilacashe);">the company behind it is known to abandon products</span></td></tr>
+
+                            <tr class="white"><td class="brand">Brave</td><td class="brand">Vivaldi-like</td><td>okay</td><td class="tabledesc">focuses on speed and ad-blocking</td></tr>
+                            
+                            <tr class="white"><td class="brand">Cromite</td><td class="brand">basically Chromium (Chrome layout)</td><td>okay</td><td class="tabledesc">Chromium fork, completely degoogled, lightweight</td></tr>
+
+                            <tr class="white"><td class="brand">Lemur</td><td class="brand">something new</td><td>bad</td><td class="tabledesc">very much a fun browser</td></tr>
+
+                            <tr class="white"><td class="brand">Soul</td><td class="brand">very much new</td><td>good</td><td class="tabledesc">feature overload</td></tr>
+
+                            <tr class="white"><td class="brand">Via</td><td class="brand">something new</td><td>good</td><td class="tabledesc">like if Soul had a lite version</td></tr>
+
+                            <tr class="white"><td class="brand">Vivaldi</td><td class="brand">similar to Edge mobile</td><td>good</td><td class="tabledesc">focuses on customisability and features.</td></tr>
+                            
+                        </table>
+                        <i style="color: var(--lilacashe);">note: Brave has had it's fair share of <a href="https://www.reddit.com/r/browsers/comments/1j1pq7b/list_of_brave_browser_controversies/" target="_blank">controversies</a></i><br>
+                        <i style="color: var(--lilacashe);">fun fact: <a href="https://pissandshittium.org/" target="_blank">this</a> exists</i><br>
+                        <div class="update"></div>
+                        
+                        <h3>firefox-based</h3>
+                        <table border="2">
+                            <tr class="heading" style=" text-align: center;"><td class="heading">name</td><td class="heading">layout</td><td class="heading">customizability</td><td class="heading">comments</td></tr>
+
+                            <tr class="white"><td class="brand">Fennec</td><td class="brand">Chrome-like</td><td>good</td><td class="tabledesc">the Vivaldi of Firefox, made in Japan</td></tr>
+                            
+                            <tr class="white"><td class="brand">IceRaven</td><td class="brand">basically Firefox (Firefox layout)</td><td>bad</td><td class="tabledesc">classic Firefox fork</td></tr>
+
+                            <tr class="white"><td class="brand">Mercury</td><td class="brand">basically Firefox (Firefox layout)</td><td>bad</td><td class="tabledesc">technically the fastest Firefox fork</td></tr>
+
+                            <tr class="white"><td class="brand">Waterfox</td><td class="brand">basically Firefox (Firefox layout)</td><td>bad</td><td class="tabledesc">an attempt to make the most secure and most private Firefox fork</td></tr>
+                            
+                        </table>
+                        <i style="color: var(--lilacashe);">note: Mozilla has had it's fair share of <a href="https://blog.mozilla.org/en/firefox/firefox-search-update/" target="_blank">controversies</a></i><br>
+                        <div class="update"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="module">
+                <h3 class="title">windows</h3>
+                <div class="imgbox">
+                    <div class="desc">
+                        <div class="update"></div>
+                        <h3>chrome-based</h3>
+                        <table border="2">
+                            <tr class="heading" style=" text-align: center;"><td class="heading">name</td><td class="heading">layout</td><td class="heading">customizability</td><td class="heading">comments</td></tr>
+
+                            <tr class="white"><td class="brand">Brave</td><td class="brand">similar to chrome</td><td>bad</td><td class="tabledesc">focuses on speed and ad-blocking, though other browsers caught up</td></tr>
+                            
+                            <tr class="white"><td class="brand">Cromite</td><td class="brand">basically Chromium (Chrome layout)</td><td>bad</td><td class="tabledesc">Chromium fork, completely degoogled, lightweight, <span style="color: var(--lilacashe);">might not be stable</span></td></tr>
+
+                            <tr class="white"><td class="brand">Thorium</td><td class="brand">basically Chromium (Chrome layout)</td><td>bad</td><td class="tabledesc">Chromium fork, completely degoogled, lightweight, <span style="color: var(--lilacashe);">more stable than Cromite, but not entirely perfect</span></td></tr>
+
+                            <tr class="white"><td class="brand">Vivaldi</td><td class="brand">similar to Opera</td><td>good</td><td class="tabledesc">focuses on customisability and features.</td></tr>
+                            
+                        </table>
+                        <i style="color: var(--lilacashe);">note: Brave has had it's fair share of <a href="https://www.reddit.com/r/browsers/comments/1j1pq7b/list_of_brave_browser_controversies/" target="_blank">controversies</a></i><br>
+                        <i style="color: var(--lilacashe);">fun fact: <a href="https://pissandshittium.org/" target="_blank">this</a> exists</i><br>
+                        <div class="update"></div>
+                        
+                        <h3>firefox-based</h3>
+                        <table border="2">
+                            <tr class="heading" style=" text-align: center;"><td class="heading">name</td><td class="heading">layout</td><td class="heading">customizability</td><td class="heading">comments</td></tr>
+
+                            <tr class="white"><td class="brand">Floorp</td><td class="brand">similar to Vivaldi</td><td>good</td><td class="tabledesc">the Vivaldi of Firefox, made in Japan</td></tr>
+                            
+                            <tr class="white"><td class="brand">Librewolf</td><td class="brand">basically Firefox (Firefox layout)</td><td>bad</td><td class="tabledesc">classic Firefox fork</td></tr>
+
+                            <tr class="white"><td class="brand">Mercury</td><td class="brand">basically Firefox (Firefox layout)</td><td>bad</td><td class="tabledesc">technically the fastest Firefox fork</td></tr>
+
+                            <tr class="white"><td class="brand">Mullvad</td><td class="brand">basically Firefox (Firefox layout)</td><td>bad</td><td class="tabledesc">an attempt to make the most secure and most private Firefox fork</td></tr>
+
+                            <tr class="white"><td class="brand">Waterfox</td><td class="brand">basically Firefox (Firefox layout)</td><td>bad</td><td class="tabledesc">decent all-around browser</td></tr>
+
+                            <tr class="white"><td class="brand">Zen</td><td class="brand">similar to Vivaldi (not as close to Opera though)</td><td>good</td><td class="tabledesc">focuses on productivity features, has really nice design language</td></tr>
+                            
+                        </table>
+                        <i style="color: var(--lilacashe);">note: Mozilla has had it's fair share of <a href="https://blog.mozilla.org/en/firefox/firefox-search-update/" target="_blank">controversies</a></i><br>
+                        <div class="update"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="module">
+                <h3 class="title">why switch?</h3>
+                <div class="imgbox">
+                    <div class="desc">
+                        <div class="update"></div>
+                        <h4>below you'll find a quick table of popular browsers and their issues</h4>
+                        <table border="2">
+                            <tr class="heading" style=" text-align: center;"><td class="heading">name</td><td class="heading">comments</td></tr>
+
+                            <tr class="white"><td>Chrome</td><td class="brand">collects lots of data, is targetted by all sorts of hackers, manifest v3 & ad blocker situation, is pretty outdated in features compared to other browsers, limited in customisation; also view these posts: <a target="_blank" href="https://www.reddit.com/r/chrome/comments/1perdzl/chrome_broke_today_on_all_my_machines_somehow/">1</a>, <a target="_blank" href="https://www.reddit.com/r/pcmasterrace/comments/15n5ovw/google_chrome_and_chrome_based_browsers_collect/">2</a>, <a target="_blank" href="https://www.forbes.com/sites/zakdoffman/2024/12/21/forget-chrome-google-will-start-tracking-you-and-all-your-smart-devices-in-8-weeks/?streamIndex=0">3</a>, <a target="_blank" href="https://thehackernews.com/2021/03/google-to-reveals-what-personal-data.html?m=1">4</a></td></tr>
+
+                            <tr class="white"><td>Firefox</td><td class="brand">limited in customisation, limited in features, various forks do what Firefox does, but better</td></tr>
+
+                            <tr class="white"><td>Opera</td><td class="brand">sketchy owners, oftentimes outdated compared to other Chrome-based browsers, very sketchy VPN, collects lots of data, often breaks; also view these posts: <a target="_blank" href="https://imgur.com/gallery/opera-gx-sucks-47UiJEm">1</a>, <a target="_blank" href="https://imgur.com/gallery/opera-gx-sucks-47UiJEm">2</a>, <a target="_blank" href="https://www.reddit.com/r/OperaGX/comments/1d5y3f4/opera_gx_is_so_efficient_its_using_negative_ram/">3</a>, <a target="_blank" href="https://www.reddit.com/r/OperaGX/comments/1pec9mx/opera_gx_has_become_unusable_and_i_dont_know_why/">4</a>, <a target="_blank" href="https://www.reddit.com/r/OperaGX/comments/1op0tsb/opera_gx_cant_see_anything_but_i_can_click_on/">5</a></td></tr>
+
+                            <tr class="white"><td>Edge</td><td class="brand">collects lots of data, some consider the UI to be downright tragic</td></tr>
+
+                            <tr class="white"><td>Atlas</td><td class="brand">collects lots of data, same integration effect can be achieved on, for example, Floorp</td></tr>
+
+                            <tr class="white"><td>Comet</td><td class="brand">collects lots of data, same integration effect can be achieved on, for example, Floorp, has had various <a target="_blank" href="https://tuta.com/blog/perplexity-comet-browser-security-privacy-risks">security risks</a></td></tr>
+
+                            <tr class="white"><td>Arc</td><td class="brand">on Windows it is just broken, a result of them porting the MacOS code onto Windows</td></tr>
+                            
+                        </table><br>
+                        <div class="update"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="note" id="bottom"><a href="#start">Click for automatic scroll-up!</a></div>
+        <footer>&copy; made by aasd. enjoy!</footer>
+        <script src="../js/js.js"></script>
+    </body>
+
+
+</html>

@@ -1,0 +1,33 @@
+.sidebar{
+    width: 30vw;
+    border: 2px solid var(--ashgrey);
+    margin-left: auto;
+}
+.module {
+    border: 2px solid green;
+    width: 90%;
+    height: 40vh;
+    justify-self: center;
+    padding: 0px;
+    margin-top:calc(5%);
+    border-radius: 5px;
+}
+.mall{
+    width: 90%;
+    justify-self: center;
+    border: 2px solid var(--red);
+    margin-top:calc(2%);
+}
+.mimgbox{
+    border: 2px solid red;
+    border-radius: 5px;
+    aspect-ratio: 3/2;
+}
+.mtitle{
+    color: var(--text);
+    font-size: large;
+}
+.mdesc{
+    color: var(--text);
+    font-size: medium;
+}
